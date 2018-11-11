@@ -1,0 +1,6 @@
+<launch>
+	<node pkg="vicon_bridge_udp" type="vicon_bridge_udp" name="vicon" output="screen">
+		<param name="datastream_port" value="51001"/>
+		<param name="tf_ref_frame_id" value="/world"/>
+	</node>
+</launch>
