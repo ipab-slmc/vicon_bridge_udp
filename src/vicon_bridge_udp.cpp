@@ -84,7 +84,7 @@ void Client::receiveTransforms(std::vector<geometry_msgs::TransformStamped> &dat
             data[i].transform.translation.y = object->ty * 1e-3;
             data[i].transform.translation.z = object->tz * 1e-3;
             tf2::Quaternion myQuaternion;
-            myQuaternion.setRPY(object->ry, -object->rx, object->rz);
+            myQuaternion.setRPY(object->rx, object->ry, object->rz);
             data[i].transform.rotation.x = myQuaternion.x();
             data[i].transform.rotation.y = myQuaternion.y();
             data[i].transform.rotation.z = myQuaternion.z();
